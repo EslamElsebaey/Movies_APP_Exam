@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/download.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/all.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Home of movies</title>
+</head>
+
+<body>
+
+  <!-- loading section  -->
+
+  <div id="loading">
+  <span class="loader"></span>
+  </div>
+<!-- *********************************************************************************************************************** -->
+
+  <!--  to top button  -->
+
+    <div class="totop smalltop">
+      <i class="fa-solid text-dark fa-angle-up"></i>
+    </div>
+<!-- ************************************************************************************************************************ -->
+
+
+  <!-- navbar on small screens -->
+
+<nav class="navbar navbar-expand-lg ">
+  <div class="container">
+   <a href="#home"><img src="images/download.png" alt=""></a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa-solid burger fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        <a class="link nav-link" id="now_playing" href="#">Now playing</a>
+        </li>
+        <li class="nav-item">
+        <a class="link nav-link" id="popular" href="#">Popular</a>
+        </li>
+        <li class="nav-item">
+          <a class="link nav-link" id="top_rated" href="#">Top Rated</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" id="trending" href="#">Trending</a>
+        </li>
+        <li class="nav-item">
+        <a class="link nav-link" id="upcoming" href="#">Upcoming</a>
+        </li>
+        <li class="mainLi nav-item">
+          <a class="contactus nav-link" href="#">Contact Us</a>
+        </li>
+        <li class="mainLi nav-item">
+          <div class="copyright mt-4 mb-0 text-white">
+            <a class="text-white fs-5 fa-fw" href="https://www.facebook.com/eslam.elsebaey.707" target="_blank"><i
+                class="fa-brands me-3 fa-facebook-f"></i></a>
+            <a class="text-white me-3 fs-5 fa-fw" href="https://www.linkedin.com/in/eslam-elsebaey-ab9564163/" target="_blank"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+            <a class="text-white me-3 fs-5 fa-fw" href="https://github.com/EslamElsebaey" target="_blank"><i
+                class="fa-brands fa-github"></i></a>
+            <p class="mb-0">
+              Copyright © 2022 Developed by
+              <a target="_blank" class="me text-decoration-none"
+                href="https://www.linkedin.com/in/eslam-elsebaey-ab9564163/">Eslam Elsebaey</a>
+              
+            </p>
+          </div>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ************************************************************************************************************************ -->
+
+<!-- sidebar on big screens -->
+
+  <div class="sidebar slide ">
+    <div class="bigbox d-flex flex-column justify-content-between">
+      <ul class="list-unstyled navlist">
+        <li class="mainLi">
+          <a class="link" id="now_playing" href="#">Now playing</a>
+        </li>
+        <li class="mainLi">
+          <a class="link" id="popular" href="#">Popular</a>
+        </li>
+        <li class="mainLi">
+          <a class="link" id="top_rated" href="#">Top Rated</a>
+        </li>
+        <li class="mainLi">
+        <a href="#" id="trendy" >Trending</a>
+        </li>
+        <li class="mainLi">
+          <a class="link" id="upcoming" href="#">Upcoming</a>
+        </li>
+        <li class="mainLi"><a class="contactus" href="#">Contact Us</a></li>
+      </ul>
+      <div class="copyright text-white">
+        <a class="text-white fs-5 fa-fw" href="https://www.facebook.com/eslam.elsebaey.707" target="_blank"><i
+            class="fa-brands me-3 fa-facebook-f"></i></a>
+        <a class="text-white me-3 fs-5 fa-fw" href="https://www.linkedin.com/in/eslam-elsebaey-ab9564163/"
+          target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="text-white me-3 fs-5 fa-fw" href="https://github.com/EslamElsebaey" target="_blank"><i
+            class="fa-brands fa-github"></i></a>
+        <p>
+          Copyright © 2019
+          <a target="_blank" class="me text-decoration-none"
+            href="https://www.linkedin.com/in/eslam-elsebaey-ab9564163/">Eslam Elsebaey</a>
+          All Rights Reserved.
+        </p>
+      </div>
+    </div>
+    <div class="smallbox d-flex justify-content-between align-items-center flex-column">
+      <img src="images/logo.png" alt="" />
+      <i class="fa-solid fa-bars exe"></i>
+      <div class="d-flex flex-column icons">
+        <i class="fa-solid fa-globe mb-3"></i>
+        <i class="fas fa-share-alt"></i>
+      </div>
+    </div>
+  </div>
+<!-- ************************************************************************************************************************ -->
+
+
+
+  <!-- home section  -->
+
+  <div class="home" id="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="wordsearch">
+            <input type="text" id="wordSearch" class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s"
+              placeholder="Get any movie you want" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="randomsearch">
+            <input type="text" id="randowSearch" class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="4s"
+              placeholder="Search in existing movies" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5" id="myRow"></div>
+
+      <div class="row" id="contactSection">
+        <h2 class="mb-4 text-white" id="contactUs">ContacUs...</h2>
+        <div class="col-md-6">
+          <div class="leftside">
+            <input type="text" class="mb-3" placeholder="Enter your name" id="userName" />
+            <div class="namewarn mywarn text-danger d-none mb-2">
+              Name should be 2 words starting with capital letter
+            </div>
+            <input type="text" class="mb-3" placeholder="Enter your phone " id="userPhone" />
+            <div class="phonewarn mywarn text-danger d-none mb-2">
+              Phone should be 11 numbers starts with 01
+            </div>
+            <input type="text" class="mb-3" placeholder="Enter your age" id="userAge" />
+            <div class="agewarn mywarn text-danger d-none mb-2">
+              Your age must be between 10 and 70
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="rightside">
+            <input type="email" class="mb-3" placeholder="Enter your Email" id="userEmail" />
+            <div class="emailwarn mywarn text-danger d-none mb-2">
+              Email should contains @ and ends with dot 2 or 4 letters
+            </div>
+            <input type="password" class="mb-4" placeholder="Enter your password " id="userPassword" />
+            <div class="passwarn mywarn text-danger d-none mb-2">
+              Password should starts with 1 capital letter and 5 to 15 numbers
+            </div>
+            <input type="password" class="mb-3" placeholder="confirm Password" id="userConfirm" />
+            <div class="confirmwarn mywarn text-danger d-none mb-2">
+              Try to write the same password
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <button id="submit" class="btn btn-outline-danger me-3" disabled="disabled">
+            Submit
+          </button>
+          <button id="clear" class="btn btn-outline-light">Clear</button>
+          <!-- <div class="text-success valid d-none mt-4 fs-3 text-center">All inputs are valid</div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
