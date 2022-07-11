@@ -19,19 +19,19 @@ $("#loading .loader").fadeOut(3000, function () {
   // *********************************************************************************************************
 
   // sideBar
-  $(".exe").click(function () {
-    if ($(".sidebar").hasClass("slide") == true) {
-      $(".sidebar").removeClass("slide");
-      $(".mainLi").show(1000);
-      $(".exe").removeClass("fa-solid fa-bars");
-      $(".exe").addClass("fa-solid fa-xmark");
-    } else {
-      $(".sidebar").addClass("slide");
-      $(".mainLi").css("display", "none");
-      $(".exe").removeClass("fa-solid fa-xmark");
-      $(".exe").addClass("fa-solid fa-bars");
-    }
-  });
+$(document).on("click", ".exe", function () {
+  if ($(".sidebar").hasClass("slide") == true) {
+    $(".sidebar").removeClass("slide");
+    $(".mainLi").show(1000);
+    $(".exe").removeClass("fa-solid fa-bars");
+    $(".exe").addClass("fa-solid fa-xmark");
+  } else {
+    $(".sidebar").addClass("slide");
+    $(".mainLi").css("display", "none");
+    $(".exe").removeClass("fa-solid fa-xmark");
+    $(".exe").addClass("fa-solid fa-bars");
+  }
+});
 
   // *********************************************************************************************************
 
@@ -196,6 +196,7 @@ $("#loading .loader").fadeOut(3000, function () {
     }
     $("#myRow").html(randomSearched);
     if ($("#myRow").html() == "") {
+      console.log("hi")
       $("#myRow").html(
         "<h1 class='text-danger text-center'>There are no matched movies</h1>"
       );
@@ -205,7 +206,13 @@ $("#loading .loader").fadeOut(3000, function () {
         justifyContent: "center",
         alignItems: "center",
       });
-    }
+    }else{
+      $("#myRow").css({
+        height: "auto",
+      })
+    
+     }
+    
   });
 
   // *****************************************************************************************************************
