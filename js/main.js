@@ -141,7 +141,7 @@ $(document).on("click", ".exe", function () {
   function displaySearched() {
     let searchMovies = "";
     for (let i = 0; i < finalReq.length; i++) {
-      searchMovies += `<div class="col-md-4">
+      searchMovies += `<div class="col-md-4" class="wow slideInLeft" data-wow-duration="2s" >
           <div class="item text-center">
             <img class="w-100" src="https://image.tmdb.org/t/p/w500${finalReq[i].poster_path}" alt="">
             <div class="overlay">
@@ -313,15 +313,12 @@ $(document).on("click", ".exe", function () {
 
   // Clear Inputs
 
-  $("#clear").click(function () {
-    $("#userName").val("");
-    $("#userPhone").val("");
-    $("#userAge").val("");
-    $("#userPassword").val("");
-    $("#userEmail").val("");
-    $("#userConfirm").val("");
-    $(".mywarn").addClass("d-none");
+  $("#clear").click(function (e) {
+      $(".mywarn").addClass("d-none");
   });
+  $("form").submit(function(e){
+    e.preventDefault() ;
+  })
 
   // got to contact section
 
