@@ -40,6 +40,9 @@ $(document).on("click", ".exe", function () {
   let moviesResult;
 
   $(".link").click(function (e) {
+    $(".sidebar").addClass("slide");
+    $(".exe").removeClass("fa-solid fa-xmark");
+    $(".exe").addClass("fa-solid fa-bars");
     getMovies(e.target.id);
   });
 
@@ -55,7 +58,7 @@ $(document).on("click", ".exe", function () {
     let myDivs = "";
     for (let i = 0; i < moviesResult.length; i++) {
       myDivs += `
-       <div class="col-lg-4 col-md-6  wow  bounceInLeft  "  data-wow-duration="2s">
+       <div class="col-lg-4 col-md-6  wow  fadeInDown  "  data-wow-duration="2s">
           <div class="item text-center">
             <img class="w-100" src="https://image.tmdb.org/t/p/w500${moviesResult[i].poster_path}" alt="">
             <div class="overlay">
@@ -101,8 +104,8 @@ $(document).on("click", ".exe", function () {
         finalResult[i].original_title = finalResult[i].title;
       }
       divs += `
-       <div class="col-lg-4 col-md-6 wow  bounceInLeft" data-wow-duration="2s">
-          <div class="item text-center  wow  bounceInLeft  "  data-wow-duration="2s" >
+       <div class="col-lg-4 col-md-6 wow  fadeInDown" data-wow-duration="2s">
+          <div class="item text-center  wow  fadeInDown  "  data-wow-duration="2s" >
             <img class="w-100" src="https://image.tmdb.org/t/p/w500${finalResult[i].poster_path}" alt="">
             <div class="overlay">
             <h3 class="mb-4">${finalResult[i].original_title}</h3>
@@ -141,7 +144,7 @@ $(document).on("click", ".exe", function () {
   function displaySearched() {
     let searchMovies = "";
     for (let i = 0; i < finalReq.length; i++) {
-      searchMovies += `<div class="col-md-4" class="wow slideInLeft" data-wow-duration="2s" >
+      searchMovies += `<div class="col-md-4" class="wow fadeInDown" data-wow-duration="2s" >
           <div class="item text-center">
             <img class="w-100" src="https://image.tmdb.org/t/p/w500${finalReq[i].poster_path}" alt="">
             <div class="overlay">
@@ -168,54 +171,6 @@ $(document).on("click", ".exe", function () {
   }
 
   //******************************************************************************************************************
-
-  // search among existed movies at your sight
-
-  $("#randowSearch").keyup(function () {
-    let randomSearched = "";
-    for (let i = 0; i < moviesResult.length; i++) {
-      if (
-        moviesResult[i].original_title
-          .toLowerCase()
-          .includes($("#randowSearch").val())
-      ) {
-        randomSearched += `
-       <div class="col-md-4">
-          <div class="item text-center">
-            <img class="w-100" src="https://image.tmdb.org/t/p/w500${moviesResult[i].poster_path}" alt="">
-            <div class="overlay">
-            <h3 class="mb-4">${moviesResult[i].original_title}</h3>
-            <p class="mb-4 fw-bolder">${moviesResult[i].overview}</p>
-            <span class="fw-bolder d-block mb-3">Rate: ${moviesResult[i].vote_average}</span>
-            <h6 class="fw-bolder">${moviesResult[i].release_date}</h6>
-            </div>
-          </div>
-        </div>
-    `;
-      }
-    }
-    $("#myRow").html(randomSearched);
-    if ($("#myRow").html() == "") {
-      console.log("hi")
-      $("#myRow").html(
-        "<h1 class='text-danger text-center'>There are no matched movies</h1>"
-      );
-      $("#myRow").css({
-        height: "70vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      });
-    }else{
-      $("#myRow").css({
-        height: "auto",
-      })
-    
-     }
-    
-  });
-
-  // *****************************************************************************************************************
 
   // Inputs validation
 
@@ -335,22 +290,17 @@ $(document).on("click", ".exe", function () {
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > 600) {
-      $(".totop").show(1000);
+      $(".totop").fadeIn();
       $(".totop").addClass("d-flex");
     } else {
-      $(".totop").hide(1000, function () {
+      $(".totop").fadeOut( function () {
         $(".totop").removeClass("d-flex");
       });
     }
   });
 
   $(".totop").click(function () {
-    $("html").animate(
-      {
-        scrollTop: 0,
-      },
-      800
-    );
+    $("html , body").animate({scrollTop: 0},  1000 , "linear");
   });
 
   // change the icon of opening the navbar in small screen
