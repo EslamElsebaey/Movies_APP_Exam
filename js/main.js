@@ -22,12 +22,10 @@ $("#loading .loader").fadeOut(3000, function () {
 $(document).on("click", ".exe", function () {
   if ($(".sidebar").hasClass("slide") == true) {
     $(".sidebar").removeClass("slide");
-    $(".mainLi").show(1000);
     $(".exe").removeClass("fa-solid fa-bars");
     $(".exe").addClass("fa-solid fa-xmark");
   } else {
     $(".sidebar").addClass("slide");
-    $(".mainLi").css("display", "none");
     $(".exe").removeClass("fa-solid fa-xmark");
     $(".exe").addClass("fa-solid fa-bars");
   }
@@ -300,7 +298,7 @@ $(document).on("click", ".exe", function () {
   });
 
   $(".totop").click(function () {
-    $("html , body").animate({scrollTop: 0},  1000 , "linear");
+    $("html , body").animate({scrollTop: 0},  500 , "linear");
   });
 
   // change the icon of opening the navbar in small screen
